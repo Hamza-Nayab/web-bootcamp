@@ -6,6 +6,8 @@ var userClickedPattern = [];
 var toggle = 0;
 var level = 0;
 
+var high = 0;
+
 $(document).keydown(function () {
   if (toggle === 0) {
     toggle = 1;
@@ -14,6 +16,10 @@ $(document).keydown(function () {
 });
 
 $(".btn").click(function () {
+  if (pattern.length === 0) {
+    nextSequence();
+    return;
+  }
   var userChosenColor = $(this).attr("id");
   userClickedPattern.push(userChosenColor);
   animatePress(userChosenColor);
@@ -24,7 +30,7 @@ $(".btn").click(function () {
 function nextSequence() {
   userClickedPattern = [];
   level += 1;
-  $("h1").text("Level " + level);
+  $("#level-title").text("Level " + level);
   var a = Math.floor(Math.random() * 4);
   var randomChosenColour = buttonColours[a];
 
@@ -63,14 +69,22 @@ function check(level) {
     setTimeout(() => {
       $("body").removeClass("game-over");
     }, 200);
-    $("h1").text("Game Over, Press Any Key to Restart");
+    $("#level-title").text("Game Over, Press Any Key to Restart");
     startOver();
   }
 }
 
 function startOver() {
+  highScore();
   level = 0;
   pattern = [];
   userClickedPattern = [];
   toggle = 0;
+}
+
+function highScore() {
+  if (level > high) {
+    high = level;
+    $(".high").text("High Score : " + high);
+  }
 }
