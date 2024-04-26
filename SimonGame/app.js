@@ -73,7 +73,7 @@ function check(level) {
     startOver();
   }
 }
-
+//restart the game
 function startOver() {
   highScore();
   level = 0;
