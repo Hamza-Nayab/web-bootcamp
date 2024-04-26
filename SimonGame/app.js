@@ -48,6 +48,8 @@ function play(name) {
   aud.play();
 }
 
+//The blinking of the div
+
 function animatePress(current) {
   $("#" + current).addClass("pressed");
   setTimeout(() => {
