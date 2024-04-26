@@ -27,6 +27,8 @@ $(".btn").click(function () {
   check(userClickedPattern.length - 1);
 });
 
+
+//generate next seq and clear the previous slide
 function nextSequence() {
   userClickedPattern = [];
   level += 1;
