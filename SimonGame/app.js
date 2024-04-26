@@ -55,6 +55,8 @@ function animatePress(current) {
   }, 100);
 }
 
+//to check every step of the way
+
 function check(level) {
   if (userClickedPattern[level] === pattern[level]) {
     console.log("success");
