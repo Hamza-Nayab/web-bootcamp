@@ -1,0 +1,5 @@
+URL : Local Address
+www.google.com: ./imgs/www.google.com.png
+www.github.com: ./imgs/www.github.com.png
+www.github.com: ./imgs/www.github.com.png
+www.youtube.com: ./imgs/www.youtube.com.png

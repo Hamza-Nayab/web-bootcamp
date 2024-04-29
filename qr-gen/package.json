@@ -1,7 +1,7 @@
 {
-  "name": "prac",
+  "name": "qr-gen",
   "version": "1.0.0",
-  "description": "Testing",
+  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -10,8 +10,7 @@
   "author": "Hamza Nayab",
   "license": "ISC",
   "dependencies": {
-    "sillyname": "^0.1.0",
-    "superhero": "^2.14.24"
-    
+    "inquirer": "^9.2.20",
+    "qr-image": "^3.2.0"
   }
 }
