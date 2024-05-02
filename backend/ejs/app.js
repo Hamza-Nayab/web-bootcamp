@@ -8,11 +8,18 @@ const day = new Date();
 var dayw = day.getDay();
 console.log(dayw);
 
+// dayw = 0;
 app.get("/", (req, res) => {
   if (dayw === 0 || dayw === 6) {
-    res.send("<h1>it is a weekend");
+    res.render("index.ejs", {
+      dayw: "a Weeknd",
+      advice: "it's time to chill",
+    });
   } else {
-    res.send("<h1>it is a weekday");
+    res.render("index.ejs", {
+      dayw: "a WeekDay",
+      advice: "it's time to work",
+    });
   }
 });
 
